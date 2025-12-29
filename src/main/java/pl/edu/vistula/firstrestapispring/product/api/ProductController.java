@@ -11,7 +11,7 @@ import pl.edu.vistula.firstrestapispring.product.api.response.ProductResponse;
 import pl.edu.vistula.firstrestapispring.product.service.ProductService;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/v1/products")
 public class ProductController {
 
     private final ProductService productService;
