@@ -2,14 +2,14 @@ package pl.edu.vistula.firstrestapispring.product.domain;
 
 public class Product {
 
-        private long id;
+        private Long id;
 
         private String name;
 
         public Product( String name) {this.name=name;}
 
 
-        public long getId() {
+        public Long getId() {
             return id;
         }
 
