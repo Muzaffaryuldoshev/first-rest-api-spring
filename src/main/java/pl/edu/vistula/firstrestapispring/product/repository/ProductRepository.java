@@ -1,11 +1,10 @@
 package pl.edu.vistula.firstrestapispring.product.repository;
 
 import org.springframework.stereotype.Repository;
+import pl.edu.vistula.firstrestapispring.product.api.response.ProductResponse;
 import pl.edu.vistula.firstrestapispring.product.domain.Product;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @Repository
 public class ProductRepository {
@@ -34,5 +33,12 @@ public class ProductRepository {
        return Optional.ofNullable(map.get(id));
    }
 
+    public List<Product> findAll(){
+        return new ArrayList<>(map.values());
+    }
+
+    public void deleteById(long id){
+        map.remove(id);
+    }
 
 }

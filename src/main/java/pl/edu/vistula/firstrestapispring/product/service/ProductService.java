@@ -16,6 +16,9 @@ import pl.edu.vistula.firstrestapispring.product.repository.ProductRepository;
 import pl.edu.vistula.firstrestapispring.product.support.ProductExceptionSupplier;
 import pl.edu.vistula.firstrestapispring.product.support.ProductMapper;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class ProductService {
     private ProductRepository productRepository;
@@ -40,6 +43,15 @@ public class ProductService {
         Product product = productRepository.findById(id).orElseThrow(ProductExceptionSupplier.productNotFoun(id));
         productRepository.save(productMapper.toProduct(product, updateProductRequest));
         return productMapper.toProductResponse(product);
+    }
+
+    public List<ProductResponse> findAll(){
+        return productRepository.findAll().stream().map(productMapper::toProductResponse).collect(Collectors.toList());
+    }
+
+    public void delete(Long id){
+        Product product = productRepository.findById(id).orElseThrow(ProductExceptionSupplier.productNotFoun(id));
+        productRepository.deleteById(product.getId());
     }
 
 
