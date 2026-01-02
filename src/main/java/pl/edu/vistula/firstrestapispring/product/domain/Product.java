@@ -1,12 +1,22 @@
 package pl.edu.vistula.firstrestapispring.product.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity(name = "PRODUCTS")
 public class Product {
 
-        private Long id;
+    @Id
+    @GeneratedValue()
+    private Long id;
+    private String name;
 
-        private String name;
-
-        public Product( String name) {this.name=name;}
+    public Product() {
+    }
+    public Product( String name) {
+        this.name=name;}
 
 
         public Long getId() {
