@@ -23,7 +23,7 @@ The project showcases:
 
 **Swagger UI URL:** [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)  
 
-![Swagger UI Screenshot](./screenshots/swagger-ui.png)
+![Swagger UI Screenshot](src/main/resources/static/screenshots/swagger.png)
 
 ---
 
@@ -34,25 +34,34 @@ The project showcases:
 - Send a **POST request** with a JSON body
 - Response: **201 Created**
 
-![Postman POST Request Screenshot](./screenshots/post-product.png)
+![Postman POST Request Screenshot](src/main/resources/static/screenshots/post.png)
 
 ### B. Retrieving Products (GET)
 - **Get All Products:** Returns a list of all products (200 OK)  
 - **Get Product by ID:** Returns a specific product by its ID  
+---
 
-![GET Products Screenshot](./screenshots/get-products.png)
+#### Get All Products 
 
-### C. Updating a Product (PUT)
+![GET Products Screenshot](src/main/resources/static/screenshots/getAll.png)
+---
+#### Get A Specific Product by ID
+![Get A Specific Product by ID](src/main/resources/static/screenshots/getOneProduct.png)
+
+### C. Updating a Product (PUT) 
 - Endpoint: `/api/v1/products/{id}`
 - Modify existing product details via PUT request
 - Custom exception if product not found
 
-![PUT Request Screenshot](./screenshots/put-product.png)
+![PUT Request Screenshot](src/main/resources/static/screenshots/Put.png)
+![PUT Request Screenshot](src/main/resources/static/screenshots/Put_1.png)
 
 ### D. Deleting a Product (DELETE)
 - Endpoint: `/api/v1/products/{id}`
 - Deletes a product by ID
 - Response: **204 No Content**
+
+![DELETE Product](src/main/resources/static/screenshots/img.png)
 
 ---
 
@@ -64,7 +73,7 @@ The project showcases:
 **H2 Console URL:** [http://localhost:8080/console](http://localhost:8080/console)  
 **JDBC URL:** `jdbc:h2:mem:testdb`
 
-![H2 Console Screenshot](./screenshots/h2-console.png)
+![H2 Console Screenshot](src/main/resources/static/screenshots/img_1.png)
 
 ---
 
